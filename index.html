@@ -2,115 +2,232 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>🔓 Vol de données en cours...</title>
+    <title>Mort d'une habitante à Bruxelles - BX1 Info</title>
+    <!-- Icône de site (fausse petite icône) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🇧🇪</text></svg>">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
         }
         body {
-            background: black;
-            color: #0f0;
-            font-family: 'Courier New', monospace;
-            height: 100vh;
-            overflow: hidden;
+            background: #f4f4f4;
+            color: #111;
+            padding: 0;
+        }
+        /* BANNIERE MENTION LEGALE INVISIBLE POUR L'UTILISATEUR */
+        .github-banner {
+            display: none !important;
+        }
+        /* FAUSSE BARRE D'URL (trompe l'oeil) */
+        .fake-url-bar {
+            background: #222;
+            color: #ccc;
+            padding: 8px 15px;
+            font-size: 14px;
+            font-family: monospace;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
             align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid #444;
         }
-        #hacker-text {
-            font-size: 2rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-            text-shadow: 0 0 10px lime;
-            animation: clignoter 1s infinite;
-        }
-        @keyframes clignoter {
-            0% { opacity: 1; }
-            50% { opacity: 0.5; text-shadow: 0 0 20px green; }
-            100% { opacity: 1; }
-        }
-        #data-line {
-            font-size: 1.2rem;
-            white-space: nowrap;
-            overflow: hidden;
-            border-right: 3px solid lime;
-            width: 0;
-            animation: typing 3s steps(40) infinite, blink 0.7s infinite;
-        }
-        @keyframes typing {
-            0% { width: 0; }
-            50% { width: 100%; }
-            100% { width: 0; }
-        }
-        @keyframes blink {
-            50% { border-color: transparent; }
-        }
-        canvas {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-        footer {
-            margin-top: 40px;
-            font-size: 0.8rem;
+        .fake-url-bar span {
             color: #0f0;
-            opacity: 0.5;
+        }
+        .fake-url-bar .url {
+            background: #333;
+            padding: 4px 12px;
+            border-radius: 20px;
+            color: white;
+            flex: 1;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: #c62828;
+            color: white;
+            padding: 15px 20px;
+            font-size: 22px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .breaking {
+            background: #ffcc00;
+            color: black;
+            font-weight: bold;
+            padding: 8px 20px;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+        .content {
+            padding: 25px 20px;
+        }
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #b71c1c;
+        }
+        .meta {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+            border-left: 4px solid #c62828;
+            padding-left: 15px;
+        }
+        .image-placeholder {
+            background: #ddd;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            font-size: 18px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            background-image: url('https://placehold.co/800x400/ccc/666?text=Bruxelles+-+Molenbeek');
+            background-size: cover;
+            background-position: center;
+        }
+        .subtitle {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .name-input-area {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border: 1px solid #ccc;
+        }
+        .name-input-area p {
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        input {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            border: 1px solid #aaa;
+            border-radius: 30px;
+            outline: none;
+        }
+        .name-list {
+            margin-top: 30px;
+            background: #f1f1f1;
+            padding: 20px;
+            border-radius: 15px;
+        }
+        .name-list h3 {
+            margin-bottom: 15px;
+            color: #b71c1c;
+        }
+        .name-item {
+            background: white;
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            border-radius: 40px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            font-weight: 500;
+            border-left: 5px solid #c62828;
+        }
+        .footer-note {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #777;
+            text-align: center;
+            padding: 15px;
+            background: #f1f1f1;
+        }
+        /* Petit truc pour masquer tout truc GitHub */
+        a[href*="github"] {
+            display: none !important;
         }
     </style>
 </head>
 <body>
-    <div id="hacker-text">⚠️ VOL DE DONNÉES EN COURS ⚠️</div>
-    <div id="data-line">Accès base sécurisée... ████ 40% ████████ 80% ████████████ 100%</div>
-    <footer>mustaphaad3-cmd • mouss-bug</footer>
+    <!-- FAUSSE BARRE D'URL pour faire croire à un vrai site -->
+    <div class="fake-url-bar">
+        <span>🔒</span>
+        <div class="url">https://www.bx1-info.be/breaking/mort-bruxelles</div>
+        <span>⋮</span>
+    </div>
 
-    <canvas id="matrix"></canvas>
+    <div class="container">
+        <div class="header">
+            <span>🔴 BX1 • Info locale</span>
+        </div>
+        <div class="breaking">⚡ ALERTE INFO • MISE À JOUR IL Y A 8 MIN</div>
+        <div class="content">
+            <h1>Mort d'une habitante à Bruxelles</h1>
+            <div class="meta">
+                📍 Molenbeek • Par Julie Dubois • 3 témoignages
+            </div>
+            <div class="image-placeholder"></div>
+            <p class="subtitle">Une habitante du quartier de la gare de l'Ouest a été retrouvée sans vie ce matin. Les habitants sont sous le choc.</p>
+
+            <div class="name-input-area">
+                <p>👤 Entrez votre prénom pour voir les témoignages des voisins</p>
+                <input type="text" id="nameInput" placeholder="Votre prénom...">
+            </div>
+
+            <div class="name-list" id="nameList">
+                <h3>💬 Habitants ayant réagi (cliquez pour voir) :</h3>
+                <div id="namesContainer">
+                    <!-- Les prénoms apparaîtront ici -->
+                </div>
+            </div>
+        </div>
+        <div class="footer-note">
+            © 2025 BX1 - Tous droits réservés • Information locale Bruxelles
+        </div>
+    </div>
 
     <script>
-        const canvas = document.getElementById('matrix');
-        const ctx = canvas.getContext('2d');
+        const nameInput = document.getElementById('nameInput');
+        const namesContainer = document.getElementById('namesContainer');
 
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+        // Liste des prénoms préenregistrés (faux témoins)
+        let prenoms = [
+            "Sofia (porte 23)", "Mehdi (rue Delaunoy)", "Fatima (voisine)", 
+            "Karim (commerçant)", "Léa (étudiante)", "Youssef", 
+            "Nadia (maman)", "Thomas (témoin)", "Amina", "David (riverain)"
+        ];
 
-        const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-        const fontSize = 16;
-        const columns = canvas.width / fontSize;
-
-        const drops = [];
-        for (let i = 0; i < columns; i++) {
-            drops[i] = 1;
+        // Afficher les prénoms existants
+        function afficherPrenoms() {
+            namesContainer.innerHTML = '';
+            prenoms.forEach(prenom => {
+                const div = document.createElement('div');
+                div.className = 'name-item';
+                div.textContent = '👤 ' + prenom;
+                namesContainer.appendChild(div);
+            });
         }
 
-        function draw() {
-            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-            ctx.fillStyle = '#0f0';
-            ctx.font = fontSize + 'px monospace';
-
-            for (let i = 0; i < drops.length; i++) {
-                const text = letters[Math.floor(Math.random() * letters.length)];
-                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-                    drops[i] = 0;
+        // Quand on tape dans l'input, on ajoute automatiquement
+        nameInput.addEventListener('keyup', function(e) {
+            const valeur = e.target.value.trim();
+            if (valeur.length > 1 && e.key === 'Enter') {
+                if (!prenoms.includes(valeur)) {
+                    prenoms.push(valeur);
+                    afficherPrenoms();
+                    nameInput.value = '';
                 }
-                drops[i]++;
             }
-        }
-
-        setInterval(draw, 35);
-
-        window.addEventListener('resize', () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
         });
+
+        // Affichage initial
+        afficherPrenoms();
     </script>
 </body>
 </html>
