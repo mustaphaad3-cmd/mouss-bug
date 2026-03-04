@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Mini Bug Mouss</title>
+<style>
+body {
+    margin: 0;
+    background: black;
+    color: lime;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.glitch {
+    font-size: 40px;
+    animation: shake 0.1s infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(2px, 2px); }
+    25% { transform: translate(-2px, -2px); }
+    50% { transform: translate(2px, -2px); }
+    75% { transform: translate(-2px, 2px); }
+    100% { transform: translate(0px, 0px); }
+}
+
+.flash {
+    animation: flashBg 0.2s infinite;
+}
+
+@keyframes flashBg {
+    0% { background: black; }
+    50% { background: red; }
+    100% { background: black; }
+}
+</style>
+</head>
+<body onclick="startBug()">
+
+<div id="text">Clique ici 😈</div>
+
+<script>
+function startBug() {
+    document.body.classList.add("flash");
+    document.getElementById("text").classList.add("glitch");
+    
+    setTimeout(() => {
+        document.body.classList.remove("flash");
+        document.getElementById("text").classList.remove("glitch");
+        document.getElementById("text").innerHTML = "Salem c Mouss 😎";
+    }, 3000);
+}
+</script>
+
+</body>
+</html>
