@@ -2,1205 +2,178 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lotus Prestige - Appartements haut standing Casablanca</title>
-    <!-- Font Awesome 6 (gratuit) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts (Poppins) -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>🔴 ALERTE NAYIM</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
         }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
-            background: #f0f0f0;
-            color: #222;
-            overflow-x: hidden;
-        }
-
-        /* ===== CUSTOM SCROLLBAR ===== */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #1a3b5d;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #d4af37;
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #b8960c;
-        }
-
-        /* ===== ANIMATIONS ===== */
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
-        }
-
-        @keyframes glow {
-            0% { text-shadow: 0 0 10px #d4af37, 0 0 20px #d4af37; }
-            50% { text-shadow: 0 0 20px #d4af37, 0 0 40px #d4af37; }
-            100% { text-shadow: 0 0 10px #d4af37, 0 0 20px #d4af37; }
-        }
-
-        @keyframes slideInLeft {
-            from { transform: translateX(-100px); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-
-        @keyframes slideInRight {
-            from { transform: translateX(100px); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-
-        @keyframes zoomIn {
-            from { transform: scale(0.5); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
-
-        /* ===== NAVIGATION ===== */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 50px;
-            background: rgba(26, 59, 93, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            box-shadow: 0 5px 30px rgba(0,0,0,0.3);
-            border-bottom: 2px solid #d4af37;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo i {
-            font-size: 2.5rem;
-            color: #d4af37;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        .logo span {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: white;
-            letter-spacing: 2px;
-        }
-
-        .logo span span {
-            color: #d4af37;
-            font-size: 2.2rem;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 40px;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1.1rem;
-            transition: all 0.3s;
-            position: relative;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #d4af37;
-            transition: width 0.3s;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .nav-links a:hover {
-            color: #d4af37;
-        }
-
-        .nav-links a i {
-            margin-right: 5px;
-        }
-
-        /* ===== HERO SECTION ===== */
-        .hero {
+            background: black;
+            font-family: 'Courier New', monospace;
             height: 100vh;
-            background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,0,0.5)), 
-                        url('https://images.pexels.com/photos/3597244/pexels-photo-3597244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            position: relative;
             overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
-            animation: rotate 20s linear infinite;
-        }
-
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        .hero-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: red;
             position: relative;
-            z-index: 2;
-            animation: zoomIn 1.5s ease;
         }
-
-        .hero-content i {
+        .container {
+            z-index: 10;
+            padding: 30px;
+            border: 3px solid red;
+            background: rgba(0,0,0,0.8);
+            box-shadow: 0 0 50px red;
+            max-width: 800px;
+            animation: clignoter 1.5s infinite;
+        }
+        @keyframes clignoter {
+            0% { box-shadow: 0 0 20px red; }
+            50% { box-shadow: 0 0 80px red; }
+            100% { box-shadow: 0 0 20px red; }
+        }
+        h1 {
             font-size: 4rem;
-            color: #d4af37;
-            margin: 0 10px;
-            animation: glow 2s ease-in-out infinite;
-        }
-
-        .hero-content h1 {
-            font-size: 6rem;
-            font-weight: 800;
-            margin: 20px 0;
             text-transform: uppercase;
             letter-spacing: 5px;
+            margin-bottom: 20px;
+            animation: glow 2s infinite;
         }
-
-        .hero-content h1 span {
-            color: #d4af37;
-            display: inline-block;
-            animation: float 3s ease-in-out infinite;
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px red; }
+            50% { text-shadow: 0 0 30px red, 0 0 60px orange; }
+            100% { text-shadow: 0 0 10px red; }
         }
-
-        .hero-content p {
+        .message {
             font-size: 2rem;
-            font-weight: 300;
-            margin-bottom: 30px;
+            margin: 30px 0;
+            color: lime;
         }
-
-        .hero-content p i {
-            font-size: 1.5rem;
-            margin: 0 5px;
+        .bzz {
+            font-size: 5rem;
+            font-weight: bold;
+            color: yellow;
+            animation: bzz 0.5s infinite;
         }
-
-        .btn-group {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            margin-top: 40px;
+        @keyframes bzz {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-3px); }
+            100% { transform: translateX(0); }
         }
-
-        .btn {
-            display: inline-block;
-            padding: 15px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.2rem;
-            transition: all 0.3s;
-            border: 2px solid transparent;
-        }
-
-        .btn-primary {
-            background: #d4af37;
-            color: #1a3b5d;
-        }
-
-        .btn-primary:hover {
-            background: transparent;
-            color: #d4af37;
-            border-color: #d4af37;
-            transform: scale(1.05);
-        }
-
-        .btn-outline {
-            border: 2px solid #d4af37;
+        .countdown {
+            font-size: 3rem;
+            margin: 30px 0;
             color: white;
         }
-
-        .btn-outline:hover {
-            background: #d4af37;
-            color: #1a3b5d;
-            transform: scale(1.05);
+        .warning {
+            font-size: 1.5rem;
+            color: orange;
+            margin: 20px 0;
         }
-
-        /* ===== SECTION TITLES ===== */
-        .section {
-            padding: 100px 50px;
-            max-width: 1400px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 3.5rem;
-            color: #1a3b5d;
-            margin-bottom: 20px;
-            font-weight: 700;
-            position: relative;
-        }
-
-        .section-title span {
-            color: #d4af37;
-            position: relative;
-        }
-
-        .section-title span::before {
-            content: '✦';
-            position: absolute;
-            left: -40px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #d4af37;
+        .danger {
+            color: red;
             font-size: 2rem;
-        }
-
-        .section-title span::after {
-            content: '✦';
-            position: absolute;
-            right: -40px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #d4af37;
-            font-size: 2rem;
-        }
-
-        .divider {
-            width: 150px;
-            height: 4px;
-            background: linear-gradient(90deg, transparent, #d4af37, transparent);
-            margin: 30px auto;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            font-size: 1.3rem;
-            color: #555;
-            max-width: 800px;
-            margin: 0 auto 60px;
-            font-weight: 300;
-        }
-
-        /* ===== APARTMENTS GRID ===== */
-        .apartments-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-            margin-top: 50px;
-        }
-
-        .apartment-card {
-            background: white;
-            border-radius: 30px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            transition: all 0.5s;
-            position: relative;
-            border: 2px solid transparent;
-        }
-
-        .apartment-card:hover {
-            transform: translateY(-20px) scale(1.02);
-            border-color: #d4af37;
-            box-shadow: 0 30px 60px rgba(212, 175, 55, 0.3);
-        }
-
-        .card-badge {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            background: #d4af37;
-            color: #1a3b5d;
-            padding: 10px 20px;
-            border-radius: 30px;
             font-weight: bold;
-            z-index: 2;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
-
-        .card-image {
-            height: 300px;
-            background-size: cover;
-            background-position: center;
-            transition: transform 0.5s;
-            position: relative;
-        }
-
-        .apartment-card:hover .card-image {
-            transform: scale(1.1);
-        }
-
-        .card-overlay {
+        canvas {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to bottom, transparent 50%, rgba(26, 59, 93, 0.9));
-        }
-
-        .card-price {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            background: #d4af37;
-            color: #1a3b5d;
-            padding: 15px 25px;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 1.3rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            z-index: 3;
-        }
-
-        .card-content {
-            padding: 30px;
-            background: white;
-        }
-
-        .card-content h3 {
-            font-size: 2rem;
-            margin-bottom: 15px;
-            color: #1a3b5d;
-            font-weight: 700;
-        }
-
-        .card-features {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin: 20px 0;
-        }
-
-        .card-features span {
-            background: #f5f5f5;
-            padding: 8px 15px;
-            border-radius: 25px;
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .card-features i {
-            color: #d4af37;
-        }
-
-        .card-desc {
-            color: #555;
-            line-height: 1.6;
-            margin: 20px 0;
-            font-weight: 300;
-        }
-
-        .btn-card {
-            display: inline-block;
-            padding: 12px 30px;
-            background: #1a3b5d;
-            color: white;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: 500;
-            transition: all 0.3s;
-            border: 2px solid #1a3b5d;
-        }
-
-        .btn-card:hover {
-            background: #d4af37;
-            border-color: #d4af37;
-            color: #1a3b5d;
-        }
-
-        /* ===== FEATURES SECTION ===== */
-        .features {
-            background: linear-gradient(135deg, #1a3b5d 0%, #2a4a6a 100%);
-            color: white;
-            padding: 80px 20px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .features::before {
-            content: '✦';
-            position: absolute;
-            top: -100px;
-            right: -100px;
-            font-size: 500px;
-            color: rgba(212, 175, 55, 0.1);
-            transform: rotate(45deg);
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-
-        .feature-item {
-            text-align: center;
-            padding: 30px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            transition: all 0.3s;
-        }
-
-        .feature-item:hover {
-            transform: translateY(-10px);
-            background: rgba(212, 175, 55, 0.2);
-            border-color: #d4af37;
-        }
-
-        .feature-item i {
-            font-size: 3.5rem;
-            color: #d4af37;
-            margin-bottom: 20px;
-        }
-
-        .feature-item h3 {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-        }
-
-        .feature-item p {
-            color: #ddd;
-        }
-
-        /* ===== GALLERY ===== */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .gallery-item {
-            position: relative;
-            height: 350px;
-            border-radius: 30px;
-            overflow: hidden;
-            cursor: pointer;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.2);
-        }
-
-        .gallery-overlay {
-            position: absolute;
-            bottom: -100%;
-            left: 0;
-            width: 100%;
-            padding: 30px;
-            background: linear-gradient(to top, #1a3b5d, transparent);
-            color: white;
-            transition: bottom 0.5s;
-        }
-
-        .gallery-item:hover .gallery-overlay {
-            bottom: 0;
-        }
-
-        /* ===== TESTIMONIALS ===== */
-        .testimonials {
-            background: #f9f9f9;
-        }
-
-        .testimonials-slider {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 50px;
-        }
-
-        .testimonial-card {
-            background: white;
-            padding: 40px;
-            border-radius: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            position: relative;
-            border: 2px solid transparent;
-            transition: all 0.3s;
-        }
-
-        .testimonial-card:hover {
-            border-color: #d4af37;
-            transform: scale(1.05);
-        }
-
-        .testimonial-card i.fa-quote-left {
-            font-size: 3rem;
-            color: #d4af37;
+            z-index: 1;
             opacity: 0.3;
-            position: absolute;
-            top: 20px;
-            right: 20px;
+            pointer-events: none;
         }
-
-        .testimonial-card p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin: 20px 0;
-            font-style: italic;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .testimonial-author i {
-            font-size: 2.5rem;
-            color: #1a3b5d;
-        }
-
-        .author-info h4 {
-            font-size: 1.2rem;
-            color: #1a3b5d;
-        }
-
-        .author-info p {
-            margin: 0;
-            font-size: 0.9rem;
-            color: #d4af37;
-        }
-
-        /* ===== CONTACT SECTION ===== */
-        .contact {
-            background: linear-gradient(135deg, #1a3b5d 0%, #2a4a6a 100%);
-            color: white;
-            padding: 100px 20px;
-        }
-
-        .contact-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-        }
-
-        .contact-info {
-            padding: 50px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 30px;
-            backdrop-filter: blur(10px);
-        }
-
-        .contact-info h2 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-        }
-
-        .contact-info h2 span {
-            color: #d4af37;
-        }
-
-        .info-item {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            margin: 30px 0;
-        }
-
-        .info-item i {
-            font-size: 2rem;
-            color: #d4af37;
-            width: 40px;
-        }
-
-        .contact-form {
-            background: white;
-            padding: 50px;
-            border-radius: 30px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 15px;
-            border: 2px solid #ddd;
-            border-radius: 15px;
+        .footer {
+            margin-top: 40px;
+            color: #666;
             font-size: 1rem;
-            transition: all 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: #d4af37;
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
-        }
-
-        .form-group textarea {
-            height: 120px;
-            resize: vertical;
-        }
-
-        .btn-submit {
-            width: 100%;
-            padding: 15px;
-            background: #d4af37;
-            color: #1a3b5d;
-            border: none;
-            border-radius: 15px;
-            font-size: 1.2rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .btn-submit:hover {
-            background: #1a3b5d;
-            color: #d4af37;
-            transform: scale(1.02);
-        }
-
-        /* ===== PATRON SECTION ===== */
-        .patron {
-            background: linear-gradient(135deg, #d4af37 0%, #f5d742 100%);
-            padding: 60px;
-            border-radius: 50px;
-            margin: 50px auto;
-            max-width: 1000px;
-            text-align: center;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-            border: 5px solid white;
-        }
-
-        .patron i {
-            font-size: 5rem;
-            color: #1a3b5d;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        .patron h3 {
-            font-size: 3rem;
-            color: #1a3b5d;
-            margin: 20px 0;
-            font-weight: 800;
-        }
-
-        .patron p {
-            font-size: 1.5rem;
-            color: #1a3b5d;
-            font-weight: 500;
-        }
-
-        .patron-signature {
-            font-size: 3rem;
-            font-family: cursive;
-            color: white;
-            text-shadow: 2px 2px 10px #1a3b5d;
-            margin-top: 30px;
-        }
-
-        /* ===== FOOTER ===== */
-        footer {
-            background: #111;
-            color: white;
-            padding: 50px;
-            text-align: center;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 50px;
-            text-align: left;
-        }
-
-        .footer-column h4 {
-            color: #d4af37;
-            margin-bottom: 20px;
-            font-size: 1.3rem;
-        }
-
-        .footer-column ul {
-            list-style: none;
-        }
-
-        .footer-column ul li {
-            margin: 10px 0;
-        }
-
-        .footer-column ul li a {
-            color: #aaa;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-column ul li a:hover {
-            color: #d4af37;
-        }
-
-        .footer-social {
-            display: flex;
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .footer-social a {
-            color: white;
-            font-size: 1.5rem;
-            transition: all 0.3s;
-        }
-
-        .footer-social a:hover {
-            color: #d4af37;
-            transform: translateY(-5px);
-        }
-
-        .footer-bottom {
-            margin-top: 50px;
-            padding-top: 30px;
-            border-top: 1px solid #333;
-            color: #aaa;
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                padding: 20px;
-            }
-            
-            .nav-links {
-                margin-top: 20px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            
-            .hero-content h1 {
-                font-size: 3rem;
-            }
-            
-            .contact-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .section-title {
-                font-size: 2.5rem;
-            }
         }
     </style>
 </head>
 <body>
-    <!-- NAVIGATION -->
-    <nav>
-        <div class="logo">
-            <i class="fas fa-lotus"></i>
-            <span>LOTUS<span>✦</span></span>
+    <canvas id="matrix"></canvas>
+    <div class="container">
+        <h1>⚠️ NAYIM ⚠️</h1>
+        <div class="bzz">📵 BZZZZT 📵</div>
+        <div class="message">
+            Nayim, je vais te bzz<br>
+            supprime le lien c tout
         </div>
-        <div class="nav-links">
-            <a href="#accueil"><i class="fas fa-home"></i> Accueil</a>
-            <a href="#appartements"><i class="fas fa-building"></i> Appartements</a>
-            <a href="#galerie"><i class="fas fa-images"></i> Galerie</a>
-            <a href="#services"><i class="fas fa-star"></i> Services</a>
-            <a href="#contact"><i class="fas fa-phone"></i> Contact</a>
-        </div>
-    </nav>
-
-    <!-- HERO SECTION -->
-    <section id="accueil" class="hero">
-        <div class="hero-content">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <h1>LOTUS <span>✦</span> PRESTIGE</h1>
-            <p>Casablanca <i class="fas fa-circle" style="font-size: 0.5rem; color: #d4af37;"></i> Quartier Gauthier</p>
-            <p><i class="fas fa-chevron-right"></i> Appartements haut standing de 96m² à 167m² <i class="fas fa-chevron-left"></i></p>
-            <div class="btn-group">
-                <a href="#appartements" class="btn btn-primary">DÉCOUVRIR</a>
-                <a href="#contact" class="btn btn-outline">CONTACT</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION APPARTEMENTS -->
-    <section id="appartements" class="section">
-        <h2 class="section-title">Nos <span>Appartements</span></h2>
-        <div class="divider"></div>
-        <p class="section-subtitle">Pour tout le monde, retrouvez votre bonheur ! Du 96m² au 167m², on vous le garantit.</p>
-
-        <div class="apartments-grid">
-            <!-- APPARTEMENT 1 -->
-            <div class="apartment-card">
-                <div class="card-badge">✦ COUP DE COEUR ✦</div>
-                <div class="card-image" style="background-image: url('https://images.pexels.com/photos/2587054/pexels-photo-2587054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')">
-                    <div class="card-overlay"></div>
-                    <div class="card-price">96m² • 1 950 000 DH</div>
-                </div>
-                <div class="card-content">
-                    <h3>Lotus Élégance</h3>
-                    <div class="card-features">
-                        <span><i class="fas fa-bed"></i> 2 chambres</span>
-                        <span><i class="fas fa-bath"></i> 2 sdb</span>
-                        <span><i class="fas fa-car"></i> Parking</span>
-                        <span><i class="fas fa-wifi"></i> Fibre</span>
-                    </div>
-                    <p class="card-desc">Appartement lumineux avec vue partielle sur la corniche. Idéal pour jeune couple ou petite famille.</p>
-                    <a href="#contact" class="btn-card">VISUALISER <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-
-            <!-- APPARTEMENT 2 -->
-            <div class="apartment-card">
-                <div class="card-image" style="background-image: url('https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')">
-                    <div class="card-overlay"></div>
-                    <div class="card-price">120m² • 2 550 000 DH</div>
-                </div>
-                <div class="card-content">
-                    <h3>Lotus Prestige</h3>
-                    <div class="card-features">
-                        <span><i class="fas fa-bed"></i> 3 chambres</span>
-                        <span><i class="fas fa-bath"></i> 2 sdb</span>
-                        <span><i class="fas fa-swimming-pool"></i> Piscine</span>
-                        <span><i class="fas fa-dumbbell"></i> Gym</span>
-                    </div>
-                    <p class="card-desc">Espace généreux, finitions haut de gamme, accès direct à la piscine et au spa.</p>
-                    <a href="#contact" class="btn-card">VISUALISER <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-
-            <!-- APPARTEMENT 3 -->
-            <div class="apartment-card">
-                <div class="card-badge">✦ SUITE PARENTALE ✦</div>
-                <div class="card-image" style="background-image: url('https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')">
-                    <div class="card-overlay"></div>
-                    <div class="card-price">167m² • 3 950 000 DH</div>
-                </div>
-                <div class="card-content">
-                    <h3>Lotus Royal</h3>
-                    <div class="card-features">
-                        <span><i class="fas fa-bed"></i> 4 chambres</span>
-                        <span><i class="fas fa-bath"></i> 3 sdb</span>
-                        <span><i class="fas fa-hot-tub"></i> Jacuzzi</span>
-                        <span><i class="fas fa-tree"></i> Jardin</span>
-                    </div>
-                    <p class="card-desc">Le luxe absolu avec terrasse panoramique et vue imprenable sur l'océan.</p>
-                    <a href="#contact" class="btn-card">VISUALISER <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FEATURES SECTION -->
-    <section id="services" class="features">
-        <div class="features-grid">
-            <div class="feature-item">
-                <i class="fas fa-crown"></i>
-                <h3>Haut Standing</h3>
-                <p>Matériaux nobles, finitions soignées, domotique intégrée</p>
-            </div>
-            <div class="feature-item">
-                <i class="fas fa-water"></i>
-                <h3>Vue Mer</h3>
-                <p>Appartements avec vue sur l'Atlantique</p>
-            </div>
-            <div class="feature-item">
-                <i class="fas fa-shield-alt"></i>
-                <h3>Sécurité 24h/24</h3>
-                <p>Gardiennage, caméras, accès sécurisé</p>
-            </div>
-            <div class="feature-item">
-                <i class="fas fa-swimming-pool"></i>
-                <h3>Piscine & Spa</h3>
-                <p>Espace détente luxueux pour les résidents</p>
-            </div>
-            <div class="feature-item">
-                <i class="fas fa-parking"></i>
-                <h3>Parking privé</h3>
-                <p>Places de parking couvertes</p>
-            </div>
-            <div class="feature-item">
-                <i class="fas fa-wifi"></i>
-                <h3>Fibre optique</h3>
-                <p>Connexion ultra-rapide</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- GALERIE -->
-    <section id="galerie" class="section">
-        <h2 class="section-title">Notre <span>Galerie</span></h2>
-        <div class="divider"></div>
-        <p class="section-subtitle">Découvrez en images la beauté de nos espaces</p>
-
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="https://images.pexels.com/photos/2776679/pexels-photo-2776679.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Piscine">
-                <div class="gallery-overlay">
-                    <h3>Piscine chauffée</h3>
-                    <p>Ouverte toute l'année</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.pexels.com/photos/5372612/pexels-photo-5372612.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Vue Casablanca">
-                <div class="gallery-overlay">
-                    <h3>Vue panoramique</h3>
-                    <p>Casablanca à vos pieds</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.pexels.com/photos/2437294/pexels-photo-2437294.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Salon moderne">
-                <div class="gallery-overlay">
-                    <h3>Salon design</h3>
-                    <p>Ambiance contemporaine</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.pexels.com/photos/280235/pexels-photo-280235.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Chambre">
-                <div class="gallery-overlay">
-                    <h3>Suite parentale</h3>
-                    <p>Espace intimiste</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.pexels.com/photos/3773577/pexels-photo-3773577.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Terrasse">
-                <div class="gallery-overlay">
-                    <h3>Terrasse privée</h3>
-                    <p>Vue sur l'océan</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.pexels.com/photos/323775/pexels-photo-323775.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Cuisine">
-                <div class="gallery-overlay">
-                    <h3>Cuisine équipée</h3>
-                    <p>Électroménager haut de gamme</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PATRON MOUSS -->
-    <div class="patron">
-        <i class="fas fa-lotus"></i>
-        <h3>✦ PATRON MOUSS ✦</h3>
-        <p>Fondateur de Lotus Prestige</p>
-        <div class="patron-signature">
-            <i class="fas fa-feather-alt"></i> Mouss
-        </div>
-        <p style="margin-top: 20px;">"Pour tout le monde, retrouvez votre bonheur ! On vous le garantit."</p>
+        <div class="countdown" id="countdown">5</div>
+        <div class="warning">🔴 SUPPRESSION EN COURS 🔴</div>
+        <div class="danger">⚡ ACCÈS BLOQUÉ ⚡</div>
+        <div class="footer">🔐 Sécurité • Avertissement • Nayim</div>
     </div>
 
-    <!-- TESTIMONIALS -->
-    <section class="section testimonials">
-        <h2 class="section-title">Ils nous <span>font confiance</span></h2>
-        <div class="divider"></div>
-        <p class="section-subtitle">Témoignages de nos résidents</p>
+    <script>
+        // Matrix background effect
+        const canvas = document.getElementById('matrix');
+        const ctx = canvas.getContext('2d');
 
-        <div class="testimonials-slider">
-            <div class="testimonial-card">
-                <i class="fas fa-quote-left"></i>
-                <p>Un cadre de vie exceptionnel, une vue magnifique, et un service irréprochable. Je recommande vivement Lotus Prestige.</p>
-                <div class="testimonial-author">
-                    <i class="fas fa-user-tie"></i>
-                    <div class="author-info">
-                        <h4>Karim B.</h4>
-                        <p>Résident - Lotus Royal</p>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <i class="fas fa-quote-left"></i>
-                <p>Appartement spacieux, bien agencé, quartier calme et sécurisé. Le patron Mouss est vraiment à l'écoute.</p>
-                <div class="testimonial-author">
-                    <i class="fas fa-user-tie"></i>
-                    <div class="author-info">
-                        <h4>Fatima Z.</h4>
-                        <p>Résidente - Lotus Prestige</p>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <i class="fas fa-quote-left"></i>
-                <p>La piscine, le spa, la vue... C'est le paradis à Casablanca. Merci à toute l'équipe.</p>
-                <div class="testimonial-author">
-                    <i class="fas fa-user-tie"></i>
-                    <div class="author-info">
-                        <h4>Mehdi A.</h4>
-                        <p>Résident - Lotus Élégance</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
 
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="contact">
-        <div class="contact-container">
-            <div class="contact-info">
-                <h2>Contactez <span>le Patron Mouss</span></h2>
-                <p>Pour toute information ou visite, n'hésitez pas à nous contacter.</p>
-                
-                <div class="info-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <h4>Adresse</h4>
-                        <p>Quartier Gauthier, Casablanca, Maroc</p>
-                    </div>
-                </div>
-                
-                <div class="info-item">
-                    <i class="fas fa-phone"></i>
-                    <div>
-                        <h4>Téléphone</h4>
-                        <p>+212 5XX-XXXXX</p>
-                    </div>
-                </div>
-                
-                <div class="info-item">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <h4>Email</h4>
-                        <p>contact@lotusprestige.ma</p>
-                    </div>
-                </div>
-                
-                <div class="info-item">
-                    <i class="fas fa-clock"></i>
-                    <div>
-                        <h4>Horaires</h4>
-                        <p>Lun-Sam: 9h - 19h</p>
-                    </div>
-                </div>
-            </div>
+        const letters = 'NAYIM010101010101010101';
+        const fontSize = 16;
+        const columns = canvas.width / fontSize;
 
-            <div class="contact-form">
-                <form>
-                    <div class="form-group">
-                        <input type="text" placeholder="Votre nom complet" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Votre email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" placeholder="Votre téléphone" required>
-                    </div>
-                    <div class="form-group">
-                        <select>
-                            <option>Appartement Lotus Élégance (96m²)</option>
-                            <option>Appartement Lotus Prestige (120m²)</option>
-                            <option>Appartement Lotus Royal (167m²)</option>
-                            <option>Autre demande</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Votre message..."></textarea>
-                    </div>
-                    <button type="submit" class="btn-submit">ENVOYER LA DEMANDE <i class="fas fa-paper-plane"></i></button>
-                </form>
-            </div>
-        </div>
-    </section>
+        const drops = [];
+        for (let i = 0; i < columns; i++) {
+            drops[i] = 1;
+        }
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-column">
-                <h4>LOTUS PRESTIGE</h4>
-                <p>Appartements haut standing à Casablanca. Du 96m² au 167m², pour tout le monde.</p>
-                <div class="footer-social">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
-                </div>
-            </div>
-            
-            <div class="footer-column">
-                <h4>Liens rapides</h4>
-                <ul>
-                    <li><a href="#accueil">Accueil</a></li>
-                    <li><a href="#appartements">Appartements</a></li>
-                    <li><a href="#galerie">Galerie</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-column">
-                <h4>Appartements</h4>
-                <ul>
-                    <li><a href="#">Lotus Élégance 96m²</a></li>
-                    <li><a href="#">Lotus Prestige 120m²</a></li>
-                    <li><a href="#">Lotus Royal 167m²</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-column">
-                <h4>Contact</h4>
-                <ul>
-                    <li><i class="fas fa-phone"></i> +212 5XX-XXXXX</li>
-                    <li><i class="fas fa-envelope"></i> contact@lotusprestige.ma</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Casablanca, Maroc</li>
-                </ul>
-            </div>
-        </div>
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = '#0f0';
+            ctx.font = fontSize + 'px monospace';
+
+            for (let i = 0; i < drops.length; i++) {
+                const text = letters[Math.floor(Math.random() * letters.length)];
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+
+        setInterval(drawMatrix, 50);
+
+        // Countdown
+        let timeLeft = 5;
+        const countdownEl = document.getElementById('countdown');
         
-        <div class="footer-bottom">
-            <p>© 2025 LOTUS PRESTIGE - Tous droits réservés - Patron Mouss</p>
-            <p style="margin-top: 10px;">✦ Du 96m² au 167m² - Pour tout le monde, on vous le garantit ! ✦</p>
-        </div>
-    </footer>
+        const timer = setInterval(() => {
+            timeLeft--;
+            countdownEl.textContent = timeLeft;
+            
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                countdownEl.textContent = "💀 SUPPRIMÉ 💀";
+                document.querySelector('.danger').innerHTML = "🔴 LIEN DÉTRUIT 🔴";
+                document.querySelector('.warning').innerHTML = "NAYIM • BZZZT • FIN";
+            }
+        }, 1000);
+
+        // Random scares
+        setInterval(() => {
+            if (Math.random() > 0.7) {
+                document.body.style.backgroundColor = 'red';
+                setTimeout(() => {
+                    document.body.style.backgroundColor = 'black';
+                }, 100);
+            }
+        }, 3000);
+    </script>
 </body>
 </html>
